@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicacionTp6.Views.ProductoCrearPage"
+             xmlns:vm="clr-namespace:AplicacionTp6.ViewModels"
+             x:DataType="vm:ProductoCrearViewModel"
+             Title="{Binding Title}" >
+    
+    <VerticalStackLayout Padding="20">
+
+
+
+        <VerticalStackLayout BackgroundColor="White">
+                <Label Text="Crear Producto Nuevo" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" />
+
+            <Label Text="Id del producto" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Placeholder="Id del producto" Text="{Binding NuevoProducto.idProducto}" PlaceholderColor="Black" TextColor="Black" />
+
+            <Label Text="Nombre del producto" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Text="{Binding NuevoProducto.nombreProducto}" PlaceholderColor="Black" TextColor="Black" />
+
+            <Label Text="Precio del producto" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Text="{Binding NuevoProducto.precioProducto}" Keyboard="Numeric" PlaceholderColor="Black" TextColor="Black"/>
+            
+            <Label Text="Categoria" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Text="{Binding NuevoProducto.categoria}" PlaceholderColor="Black" TextColor="Black"/>
+            
+            <Label Text="Descripcion" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Text="{Binding NuevoProducto.descripcion}" PlaceholderColor="Black" TextColor="Black"/>
+            
+            <Label Text="imagen?" TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Text="{Binding NuevoProducto.imagen}" PlaceholderColor="Black" TextColor="Black"/>
+                
+                <Button Text="Crear Producto"
+                    Command="{Binding CrearProductoCommand}" 
+                    BackgroundColor="#00796B"
+                    TextColor="White"
+                    Margin="0,10,0,0"/>
+                
+                <Button Text="Volver"
+                BackgroundColor="#E53935"
+                TextColor="White"
+                Margin="0,10,0,0" Clicked="Button_Clicked"/>
+            </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>
